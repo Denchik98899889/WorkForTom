@@ -1,0 +1,41 @@
+body {
+  background-color: rgb(170, 255, 109);
+    margin: 0 auto;
+   
+}
+  #inputtt{
+    width: 192px;
+    top: 25px;
+    left: 100px;
+    position: absolute;
+    
+  }
+
+  #btn{
+    width: 200px;
+    height: 200px;
+    top:50px ;
+    left: 100px;
+    position: absolute;
+  }
+  #result{
+    margin-bottom: 5px;
+    left: 320px;
+    position: absolute;
+    color: rgb(255, 0, 0);
+  }
+
+  ul{
+    list-style: georgian;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    height: 300px;
+    width: 200px;
+    top : 50px;
+    color: black;
+    position: absolute;
+  }
+
+  
