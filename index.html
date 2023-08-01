@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container"></div>
-    <p>
-        Введіть: <input type="text" id="inputtt">
-        <button  id="btn">click
-            click
-            click
-        </button>
-        <ul id ="result"></ul>
-    </p>
-
+    <center>
+  <div class="container">
+    <h1>ToDo List</h1>
+    <input type="text" id="taskInput" placeholder="Введіть завдання">
+    <button onclick="addTask()">Додати</button>
+    <ul id="taskList"></ul>
+  </div>
+</center>
 </body>
 <script src="mywork.js"></script>
 </html>
