@@ -1,34 +1,91 @@
 body {
-  font-family: Arial, sans-serif;
-}
-
-.container {
-  max-width: 400px;
+  background-color: rgb(152, 173, 184);
   margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
-h1 {
-  text-align: center;
+#inputtt {
+  width: 300px;
+  top: 75px;
+  left: 150px;
+  position: absolute;
+}
+
+#btn {
+  width: 100px;
+  height: 30px;
+  top: 75px;
+  left: 500px;
+  position: absolute;
 }
 
 ul {
-  list-style-type: none;
+  list-style: georgian;
+  margin: 0;
   padding: 0;
 }
 
-li {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
+#result {
+  margin-bottom: 5px;
+  left: 200px;
+  top: 215px;
+  position: absolute;
+  font-size: large;
+  color: rgb(169, 42, 42);
 }
 
-li input[type="checkbox"] {
-  margin-right: 10px;
+.container {
+  height: 300px;
+  width: 200px;
+  top: 50px;
+  color: rgb(0, 0, 0);
+  position: absolute;
 }
 
-li.completed {
-  text-decoration: line-through;
+h1 {
+  color: rgb(0, 0, 0);
+  top: -3px;
+  left: 150px;
+  font-size: x-large;
+  position: absolute;
 }
+
+h2 {
+  color: rgb(0, 0, 0);
+  top: 150px;
+  left: 150px;
+  font-size: x-large;
+  position: absolute;
+}
+
+h3 {
+  top: 360px;
+  left: 150px;
+  font-size: x-large;
+  position: absolute;
+}
+
+#result2 {
+  text-decoration-line: line-through;
+  margin-bottom: 5px;
+  top: 430px;
+  left: 120px;
+  position: absolute;
+  font-size: large;
+  color: rgb(0, 0, 0);
+}
+
+
+function deleteTask(button) {
+  const taskItem = button.parentElement;
+  taskItem.remove();
+}
+
+document.removeChild(result);
+
+splice() +
+
+
+delt.addEventListener('click' , (den2) => {
+
+  remove(result)
+})  
