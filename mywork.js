@@ -1,28 +1,32 @@
-// Функція для додавання нового завдання
-function addTask() {
-    const taskInput = document.getElementById('taskInput');
-    const taskText = taskInput.value.trim();
-    if (taskText === '') return;
-  
-    const taskList = document.getElementById('taskList');
-    const newTask = document.createElement('li');
-    newTask.innerHTML = `
-      <input type="checkbox" onchange="toggleTask(this)">
-      <span>${taskText}</span>
-      <button onclick="deleteTask(this)">Видалити</button>
-    `;
-    taskList.appendChild(newTask);
-    taskInput.value = '';
-  }
-  
-  // Функція для відмітки завдання як виконаного або невиконаного
-  function toggleTask(checkbox) {
-    const taskText = checkbox.nextElementSibling;
-    taskText.classList.toggle('completed', checkbox.checked);
-  }
-  
-  // Функція для видалення завдання
-  function deleteTask(button) {
-    const taskItem = button.parentElement;
-    taskItem.remove();
-  }
+const input = document.getElementById('inputtt')
+
+const btn = document.getElementById('btn')
+
+const result = document.getElementById('result')
+
+const result2 = document.getElementById('result2')
+
+const comp = document.getElementById('comp')
+
+const delt = document.getElementById('delt')
+
+// обработчік собитій комфортно для багатьох кнопок
+
+// DOM tree
+
+btn.addEventListener('click' , (denis) => {
+
+    result.innerHTML +=  `<p>
+
+    ${input.value}
+    
+        </p>`
+}) 
+comp.addEventListener('click' , (den) => {
+    
+    result2.innerHTML +=  `<p>
+    
+    ${input.value}
+
+        </p>`
+}) 
