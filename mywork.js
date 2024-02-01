@@ -30,3 +30,10 @@ comp.addEventListener('click' , (den) => {
 
         </p>`
 }) 
+
+
+delt.addEventListener('click' , (den2) => {
+
+    Element.remove(result)
+    
+  }) 
