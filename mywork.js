@@ -1,39 +1,62 @@
-const input = document.getElementById('inputtt')
+const input = document.getElementById('inputtt');
+const btn = document.getElementById('btn');
+const result = document.getElementById('result');
+const result2 = document.getElementById('result2');
+const comp = document.getElementById('comp');
+const delt = document.getElementById('delt');
 
-const btn = document.getElementById('btn')
-
-const result = document.getElementById('result')
-
-const result2 = document.getElementById('result2')
-
-const comp = document.getElementById('comp')
-
-const delt = document.getElementById('delt')
-
-// обработчік собитій комфортно для багатьох кнопок
-
-// DOM tree
-
-btn.addEventListener('click' , (denis) => {
-
-    result.innerHTML +=  `<p>
-
-    ${input.value}
+// Функция для создания нового элемента списка с кнопкой "Delete"
+function createListItem(text) {
+    const listItem = document.createElement('li');
     
-        </p>`
-}) 
-comp.addEventListener('click' , (den) => {
+    // Создаем чекбокс
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
     
-    result2.innerHTML +=  `<p>
+    // Создаем текстовый узел с содержимым из поля ввода
+    const textNode = document.createTextNode(text);
     
-    ${input.value}
-
-        </p>`
-}) 
-
-
-delt.addEventListener('click' , (den2) => {
-
-    Element.remove(result)
+    // Создаем кнопку "Delete"
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.addEventListener('click', () => {
+        listItem.remove();
+    });
     
-  }) 
+    // Добавляем чекбокс, текстовый узел и кнопку "Delete" в элемент списка
+    listItem.appendChild(checkbox);
+    listItem.appendChild(textNode);
+    listItem.appendChild(deleteButton);
+    
+    return listItem;
+}
+
+// Обработчик события для кнопки "Add"
+btn.addEventListener('click', () => {
+    const listItem = createListItem(input.value);
+    result.appendChild(listItem);
+    input.value = '';
+});
+
+// Обработчик для кнопки "Completed"
+comp.addEventListener('click', () => {
+    const listItems = result.querySelectorAll('li');
+    listItems.forEach((item) => {
+        const checkbox = item.querySelector('input[type="checkbox"]');
+        if (checkbox.checked) {
+            result2.appendChild(item);
+        }
+    });
+});
+
+// Обработчик для кнопки "Delete"
+delt.addEventListener('click', () => {
+    const listItems = result.querySelectorAll('li');
+    listItems.forEach((item) => {
+        const checkbox = item.querySelector('input[type="checkbox"]');
+        if (checkbox.checked) {
+            item.remove();
+        }
+    });
+});
+  
