@@ -19,7 +19,7 @@ function createListItem(text) {
     // Создаем кнопку "Delete"
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
-    deleteButton.addEventListener('click', () => {
+    deleteButton.addEventListener('click', (den3) => {
         listItem.remove();
     });
     
@@ -32,14 +32,14 @@ function createListItem(text) {
 }
 
 // Обработчик события для кнопки "Add"
-btn.addEventListener('click', () => {
+btn.addEventListener('click', (den) => {
     const listItem = createListItem(input.value);
     result.appendChild(listItem);
     input.value = '';
 });
 
 // Обработчик для кнопки "Completed"
-comp.addEventListener('click', () => {
+comp.addEventListener('click', (den2) => {
     const listItems = result.querySelectorAll('li');
     listItems.forEach((item) => {
         const checkbox = item.querySelector('input[type="checkbox"]');
@@ -50,7 +50,7 @@ comp.addEventListener('click', () => {
 });
 
 // Обработчик для кнопки "Delete"
-delt.addEventListener('click', () => {
+delt.addEventListener('click', (den4) => {
     const listItems = result.querySelectorAll('li');
     listItems.forEach((item) => {
         const checkbox = item.querySelector('input[type="checkbox"]');
@@ -59,4 +59,4 @@ delt.addEventListener('click', () => {
         }
     });
 });
-  
+
