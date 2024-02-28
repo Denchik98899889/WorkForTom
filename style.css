@@ -1,4 +1,4 @@
-body {
+ody {
   background-color: rgb(152, 173, 184);
   margin: 0 auto;
 }
@@ -74,7 +74,7 @@ h3 {
   color: rgb(0, 0, 0);
 }
 
-
+ 
 function deleteTask(button) {
   const taskItem = button.parentElement;
   taskItem.remove();
@@ -88,4 +88,270 @@ splice() +
 delt.addEventListener('click' , (den2) => {
 
   remove(result)
-})  
+}) 
+
+мне нужно что бы checkbox появлялся возле каждого элемента в 'result'
+
+
+
+
+// Обработчик события для кнопки "Add"
+btn.addEventListener('click', () => {
+    // Создаем новый элемент списка
+    const listItem = document.createElement('li');
+    
+    // Создаем чекбокс
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    
+    // Создаем текстовый узел с содержимым из поля ввода
+    const textNode = document.createTextNode(input.value);
+    
+    // Добавляем чекбокс и текстовый узел в элемент списка
+    listItem.appendChild(checkbox);
+    listItem.appendChild(textNode);
+    
+    // Добавляем элемент списка в список result
+    result.appendChild(listItem);
+    
+    // Очищаем поле ввода
+    input.value = '';
+});
+ody {
+  background-color: rgb(152, 173, 184);
+  margin: 0 auto;
+}
+
+#inputtt {
+  width: 300px;
+  top: 75px;
+  left: 150px;
+  position: absolute;
+}
+
+#btn {
+  width: 100px;
+  height: 30px;
+  top: 75px;
+  left: 500px;
+  position: absolute;
+}
+
+ul {
+  list-style: georgian;
+  margin: 0;
+  padding: 0;
+}
+
+#result {
+  margin-bottom: 5px;
+  left: 200px;
+  top: 215px;
+  position: absolute;
+  font-size: large;
+  color: rgb(169, 42, 42);
+}
+
+.container {
+  height: 300px;
+  width: 200px;
+  top: 50px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  top: -3px;
+  left: 150px;
+  font-size: x-large;
+  position: absolute;
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+  top: 150px;
+  left: 150px;
+  font-size: x-large;
+  position: absolute;
+}
+
+h3 {
+  top: 360px;
+  left: 150px;
+  font-size: x-large;
+  position: absolute;
+}
+
+#result2 {
+  text-decoration-line: line-through;
+  margin-bottom: 5px;
+  top: 430px;
+  left: 120px;
+  position: absolute;
+  font-size: large;
+  color: rgb(0, 0, 0);
+}
+
+ 
+function deleteTask(button) {
+  const taskItem = button.parentElement;
+  taskItem.remove();
+}
+
+document.removeChild(result);
+
+splice() +
+
+
+delt.addEventListener('click' , (den2) => {
+
+  remove(result)
+}) 
+
+мне нужно что бы checkbox появлялся возле каждого элемента в 'result'
+
+
+
+
+// Обработчик события для кнопки "Add"
+btn.addEventListener('click', () => {
+    // Создаем новый элемент списка
+    const listItem = document.createElement('li');
+    
+    // Создаем чекбокс
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    
+    // Создаем текстовый узел с содержимым из поля ввода
+    const textNode = document.createTextNode(input.value);
+    
+    // Добавляем чекбокс и текстовый узел в элемент списка
+    listItem.appendChild(checkbox);
+    listItem.appendChild(textNode);
+    
+    // Добавляем элемент списка в список result
+    result.appendChild(listItem);
+    
+    // Очищаем поле ввода
+    input.value = '';
+});
+ody {
+  background-color: rgb(152, 173, 184);
+  margin: 0 auto;
+}
+
+#inputtt {
+  width: 300px;
+  top: 75px;
+  left: 150px;
+  position: absolute;
+}
+
+#btn {
+  width: 100px;
+  height: 30px;
+  top: 75px;
+  left: 500px;
+  position: absolute;
+}
+
+ul {
+  list-style: georgian;
+  margin: 0;
+  padding: 0;
+}
+
+#result {
+  margin-bottom: 5px;
+  left: 200px;
+  top: 215px;
+  position: absolute;
+  font-size: large;
+  color: rgb(169, 42, 42);
+}
+
+.container {
+  height: 300px;
+  width: 200px;
+  top: 50px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  top: -3px;
+  left: 150px;
+  font-size: x-large;
+  position: absolute;
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+  top: 150px;
+  left: 150px;
+  font-size: x-large;
+  position: absolute;
+}
+
+h3 {
+  top: 360px;
+  left: 150px;
+  font-size: x-large;
+  position: absolute;
+}
+
+#result2 {
+  text-decoration-line: line-through;
+  margin-bottom: 5px;
+  top: 430px;
+  left: 120px;
+  position: absolute;
+  font-size: large;
+  color: rgb(0, 0, 0);
+}
+
+ 
+function deleteTask(button) {
+  const taskItem = button.parentElement;
+  taskItem.remove();
+}
+
+document.removeChild(result);
+
+splice() +
+
+
+delt.addEventListener('click' , (den2) => {
+
+  remove(result)
+}) 
+
+мне нужно что бы checkbox появлялся возле каждого элемента в 'result'
+
+
+
+
+// Обработчик события для кнопки "Add"
+btn.addEventListener('click', () => {
+    // Создаем новый элемент списка
+    const listItem = document.createElement('li');
+    
+    // Создаем чекбокс
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    
+    // Создаем текстовый узел с содержимым из поля ввода
+    const textNode = document.createTextNode(input.value);
+    
+    // Добавляем чекбокс и текстовый узел в элемент списка
+    listItem.appendChild(checkbox);
+    listItem.appendChild(textNode);
+    
+    // Добавляем элемент списка в список result
+    result.appendChild(listItem);
+    
+    // Очищаем поле ввода
+    input.value = '';
+});
